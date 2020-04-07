@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "Sign Up";
+} 
+<div class="container"> 
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Tạo tài khoản</h1>
+                        </div>
+                        <form class="user">
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control form-control-user" id="LastName" placeholder="Họ">
+                                </div>
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control form-control-user" id="FirstName" placeholder="Tên">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-user" id="InputEmail" placeholder="Email">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="password" class="form-control form-control-user" id="InputPassword" placeholder="Mật khẩu">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control form-control-user" id="RepeatPassword" placeholder="Nhập lại mật khẩu">
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-custom btn-block bg-theme">Đăng ký</a>
+                            <hr>
+                            <a href="#" class="btn btn-custom btn-block bg-facebook">
+                                <i class="fab fa-facebook-f fa-fw"></i> Đăng ký với tài khoản Facebook
+                            </a>
+                            <a href="#" class="btn btn-custom btn-block bg-google">
+                                <i class="fab fa-google fa-fw"></i> Đăng ký với tài khoản Google
+                            </a>
+                        </form>
+                        <hr>                        
+                        <div class="text-center">
+                            <a class="small" href="#">Đã có tài khoản? Đăng nhập!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Styles{
+    <link href="~/css/account.css" rel="stylesheet" />
+}
+

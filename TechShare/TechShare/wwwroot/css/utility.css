@@ -1,0 +1,22 @@
+﻿/*Style cho partial view _Utility.cshtml*/
+.widget {
+    border: 1px solid var(--border-color);
+}
+
+    .widget.search input {
+        border: 1px solid var(--border-color);
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .widget.categories .item {
+        background-color: var(--item-background-color);
+    }
+
+    .widget.tags .tag {
+        border: 1px solid var(--border-color);
+    }
+
+button.submit .icon-search {
+    margin-right: 10px;
+}

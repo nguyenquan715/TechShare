@@ -1,0 +1,9 @@
+﻿blockquote.blockquote, .post .post-tags .tag, .blog-post .posts-nav a {
+    border: 1px solid var(--border-color);
+}
+.blog-post .post-comments .comment-body, .blog-post .add-comment input, .blog-post .add-comment textarea {
+    border-bottom: 1px solid var(--border-color);
+}
+.blog-post .icon{
+    line-height:35px;
+}

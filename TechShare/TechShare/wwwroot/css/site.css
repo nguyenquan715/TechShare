@@ -1,0 +1,48 @@
+﻿* {
+    font-family: var(--text-font) !important;    
+    box-sizing: border-box;
+}
+/*Header*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:white;
+    z-index:999;
+}
+    .header .navbar {
+        border-bottom: 1px solid var(--theme-color) !important;
+    }
+    .header a{
+        font-size:20px!important;
+    }
+    .header #logo-text {
+        font-family: 'Special Elite', cursive !important;
+        font-size: 25px !important;
+        color: var(--theme-color);
+    }
+/*Body*/
+.page-body{
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:50px; 
+}
+/*Footer*/
+.main-footer{
+    padding:0!important;    
+}
+    .main-footer .copyrights{
+        margin-top:0 !important;
+    }
+
+/*Pagination*/
+.pagination li a.active, .pagination li a:hover {
+    background-color: var(--theme-color) !important;
+    color: white !important;
+    font-weight: bold;
+}
+/*FontAwesome*/
+i{
+    font-family:FontAwesome!important;
+}
