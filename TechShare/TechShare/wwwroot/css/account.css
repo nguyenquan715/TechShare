@@ -1,18 +1,12 @@
-﻿.bg-register-image {
-    background-image: url(https://source.unsplash.com/Mv9hjnEUHR4/600x800);
-    background-position:center;
-    background-size:cover;
-}
-.bg-login-image {
-    background-image: url(https://source.unsplash.com/K4mSJ7kc0As/600x800);
-    background-position: center;
-    background-size: cover;
+﻿.shadow-custom{
+    box-shadow:3px 3px 15px rgba(0,0,0,0.3);
 }
 form.user{
 
 }
     form.user input{
         border-radius:20px;
+        border:1px solid var(--border-color);
     }
 .btn-custom{
     border-radius:20px!important;

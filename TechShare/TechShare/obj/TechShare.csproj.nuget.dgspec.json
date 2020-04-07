@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NAQ\\U3\\HKII\\Subjects\\Object-Oriented Analysis&Design\\BTL\\TechShare\\TechShare\\TechShare.csproj": {}
+    "D:\\NAQ\\U3\\HKII\\Git\\TechShare\\TechShare\\TechShare\\TechShare.csproj": {}
   },
   "projects": {
-    "D:\\NAQ\\U3\\HKII\\Subjects\\Object-Oriented Analysis&Design\\BTL\\TechShare\\TechShare\\TechShare.csproj": {
+    "D:\\NAQ\\U3\\HKII\\Git\\TechShare\\TechShare\\TechShare\\TechShare.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NAQ\\U3\\HKII\\Subjects\\Object-Oriented Analysis&Design\\BTL\\TechShare\\TechShare\\TechShare.csproj",
+        "projectUniqueName": "D:\\NAQ\\U3\\HKII\\Git\\TechShare\\TechShare\\TechShare\\TechShare.csproj",
         "projectName": "TechShare",
-        "projectPath": "D:\\NAQ\\U3\\HKII\\Subjects\\Object-Oriented Analysis&Design\\BTL\\TechShare\\TechShare\\TechShare.csproj",
+        "projectPath": "D:\\NAQ\\U3\\HKII\\Git\\TechShare\\TechShare\\TechShare\\TechShare.csproj",
         "packagesPath": "C:\\Users\\DINH NGUYEN\\.nuget\\packages\\",
-        "outputPath": "D:\\NAQ\\U3\\HKII\\Subjects\\Object-Oriented Analysis&Design\\BTL\\TechShare\\TechShare\\obj\\",
+        "outputPath": "D:\\NAQ\\U3\\HKII\\Git\\TechShare\\TechShare\\TechShare\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DINH NGUYEN\\AppData\\Roaming\\NuGet\\NuGet.Config",

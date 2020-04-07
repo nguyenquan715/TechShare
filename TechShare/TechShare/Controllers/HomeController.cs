@@ -26,15 +26,7 @@ namespace TechShare.Controllers
         public IActionResult Post()
         {
             return View();
-        }
-        public IActionResult Login()
-        {
-            return View("Signin");
-        }
-        public IActionResult Signup()
-        {
-            return View();
-        }
+        }        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
