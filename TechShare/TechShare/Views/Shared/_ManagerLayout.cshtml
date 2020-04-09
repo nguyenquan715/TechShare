@@ -56,7 +56,36 @@
 
     <!--Body-->
     <div class="container-fluid page-body">
-        @RenderBody()
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header content-between">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>@ViewData["Header"]</h2>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+
+            <!-- Main content -->
+            <section class="content-between">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <partial name="/Views/Shared/_Profile.cshtml" />
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-8">
+                            @RenderBody()
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
     </div>
 
     <!-- Page Footer-->
@@ -78,7 +107,7 @@
     </footer>
     <!-- JavaScript files-->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>    
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>

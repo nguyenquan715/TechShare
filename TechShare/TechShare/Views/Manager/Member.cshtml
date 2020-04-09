@@ -1,0 +1,69 @@
+﻿
+@{
+    Layout = "_ManagerLayout";
+    ViewData["Title"] = "Trang cá nhân";
+    ViewData["Header"] = "Trang cá nhân";
+}
+<div class="card card-border">
+    <div class="card-header p-2">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link active" href="#member-posts" data-toggle="tab">Bài viết</a></li>
+            <li class="nav-item"><a class="nav-link" href="#member-notifi" data-toggle="tab">Thông báo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#member-behavior" data-toggle="tab">Tương tác</a></li>
+        </ul>
+    </div><!-- /.card-header -->
+    <div class="card-body">
+        <div class="tab-content">
+            <div class="tab-pane active" id="member-posts">
+                <div class="row">
+                @for(int i = 0; i < 5; i++)
+                {
+                    <div class="col-md-12 mb-3">
+                        <div class="card card-border shadow">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="card card-border card-post">
+                                        <div class="card-header">
+                                            <h6 class="card-title">Các nhà khoa học tiến hành thám hiểm một khu rừng cổ xưa 60 nghìn năm tuổi chìm dưới biển</h6>
+                                        </div>
+                                        <div class="card-body card-info">
+                                            <div class="card-info-first text-muted">
+                                                <div class="status-post">Đã đăng</div>
+                                                <div class="date-post">09/04/2020</div>
+                                            </div>
+                                            <div class="card-info-second">
+                                                <div class="categories-post">Technology | Business</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 card-tool">
+                                    <button title="Xem bài viết" class="btn-tool detail-post"><i class="fa fa-eye"></i></button>
+                                    <button title="Sửa bài viết" class="btn-tool edit-post"><i class="fa fa-edit"></i></button>
+                                    <button title="Xóa bài viết" class="btn-tool delete-post"><i class="fa fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }                    
+                </div>
+            </div>
+            <div class="tab-pane" id="member-notifi">
+
+            </div>
+            <div class="tab-pane" id="member-behavior">
+                
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+    </div><!-- /.card-body -->
+</div>
+<!-- /.nav-tabs-custom -->                
+@section Styles{
+    <style>
+        :root {
+            --primary-color: var(--info-color);
+        }
+    </style>
+    <link href="~/css/Manager/manager.css" rel="stylesheet" />
+}

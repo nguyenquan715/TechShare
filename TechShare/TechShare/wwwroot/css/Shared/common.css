@@ -1,0 +1,18 @@
+﻿:root {
+    --theme-color: #ff3f3f;
+    --border-color: #d0cfcf;    
+    --item-background-color: #e8e8e8;
+    --info-color:#17a2b8;
+    --warning-color:#ffc107;
+    --text-font: 'Josefin Sans', sans-serif;    
+}
+hr {
+    border-bottom: 0.5px solid var(--border-color);
+}
+
+i {
+    font-style: normal;
+}
+.bg-theme {
+    background-color: var(--theme-color);
+}

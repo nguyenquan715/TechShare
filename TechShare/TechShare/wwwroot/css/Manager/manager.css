@@ -1,0 +1,114 @@
+﻿.content-between{
+    margin-top:15px;
+}
+/*Card custom*/
+.card-theme{   
+    border-top:3px solid var(--primary-color)!important;
+    margin-bottom:20px;
+    box-shadow:3px 3px 5px rgba(0,0,0,0.4);
+} 
+    .card-theme .card-header{        
+        background-color:var(--primary-color);
+    }
+        .card-theme .card-header .card-title{
+            color:white;
+            margin-bottom:0;
+        }
+.card-border{
+    border-color:var(--border-color);
+    border-radius:0;
+}
+.card-post{
+    border-top:0;
+    border-bottom:0;
+    border-left:0;
+}
+    .card-post .card-header{
+        color:var(--primary-color);
+        background-color:white;
+    }   
+        .card-post .card-header .card-title{
+            line-height:unset;
+            margin:0;
+        }
+.card-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;    
+}
+    .card-info-first{
+        display:flex;
+    }
+        .card-info-first .status-post, .card-info-first .date-post {
+            margin-right:10px;
+        }
+    .card-info-second {
+        
+    }
+        .card-info-second .categories-post{
+            color:var(--theme-color);
+            font-weight:bold;
+        }
+.card-tool{
+    display:flex;
+    align-items:center;
+    justify-content:center; 
+    flex-direction:column; 
+    padding:0; 
+    padding-right:30px;
+}
+.btn-tool {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    color: var(--primary-color);
+    margin: 5px;
+    padding: 5px;
+    font-size: 15px;
+    width: 100%;     
+}
+    .btn-tool:hover {
+        color:white;
+        background-color: var(--primary-color);
+        font-weight:bold;
+    }
+/*Navigation bar*/
+.nav{
+
+}
+    .nav .nav-item{
+
+    }
+        .nav .nav-item .nav-link{
+            color:black;
+        }        
+        .nav .nav-item .active {
+            color:white;
+            background-color:var(--primary-color);
+        }
+
+/*Avatar*/
+.profile-user-img {
+    border: 3px solid var(--border-color);
+    margin: 0 auto;
+    padding: 3px;
+    width: 150px;
+}
+.img-circle{    
+    border-radius:50%;
+}
+/*Name*/
+.profile-username {    
+    margin-top: 5px;
+}
+/*List group*/
+.list-group-unbordered > .list-group-item {
+    border-left: 0;
+    border-radius: 0;
+    border-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-color:var(--border-color);
+}

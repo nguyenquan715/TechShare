@@ -6,7 +6,7 @@
     .widget.search input {
         border: 1px solid var(--border-color);
         padding: 10px;
-        border-radius: 15px;
+        border-radius: 20px;
     }
 
     .widget.categories .item {

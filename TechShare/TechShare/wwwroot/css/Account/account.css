@@ -18,19 +18,11 @@ form.user{
     color:white;
     text-decoration:none;
 }
-.bg-theme{
-    background-color:var(--theme-color);
-}
 .bg-google {
     background-color: #ea4335;
 }
 .bg-facebook {
     background-color: #3b5998;
 }
-hr{
-    border-bottom:0.5px solid var(--border-color);
-}
-i{
-    font-style:normal;
-}
+
 
