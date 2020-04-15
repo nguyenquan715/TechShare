@@ -24,7 +24,7 @@
                                 <div class="col-md-10">
                                     <div class="card card-border card-post">
                                         <div class="card-header">
-                                            <h6 class="card-title">Các nhà khoa học tiến hành thám hiểm một khu rừng cổ xưa 60 nghìn năm tuổi chìm dưới biển</h6>
+                                            <a class="card-title" asp-controller="Home" asp-action="Post">Các nhà khoa học tiến hành thám hiểm một khu rừng cổ xưa 60 nghìn năm tuổi chìm dưới biển</a>
                                         </div>
                                         <div class="card-body card-info">
                                             <div class="card-info-first text-muted">
@@ -38,9 +38,9 @@
                                     </div>
                                 </div>
                                 <div class="col-md-2 card-tool">
-                                    <button title="Xem bài viết" class="btn-tool detail-post"><i class="fa fa-eye"></i></button>
-                                    <button title="Sửa bài viết" class="btn-tool edit-post"><i class="fa fa-edit"></i></button>
-                                    <button title="Xóa bài viết" class="btn-tool delete-post"><i class="fa fa-trash"></i></button>
+                                    <a title="Xem bài viết" class="btn-tool detail-post" asp-controller="Home" asp-action="Post"><i class="fa fa-eye"></i></a>
+                                    <a title="Sửa bài viết" class="btn-tool edit-post" href="#"><i class="fa fa-edit"></i></a>
+                                    <a title="Xóa bài viết" class="btn-tool delete-post" href="#"><i class="fa fa-trash"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -55,6 +55,9 @@
                 
             </div>
             <!-- /.tab-pane -->
+        </div>
+        <div id="dialog-delete-post" title="Xóa bài viết ?">
+            <div><i class="fa fa-question-circle"></i><span>Bạn có chắc chắn muốn xóa bài viết này ?</span><div>
         </div>
     </div><!-- /.card-body -->
 </div>

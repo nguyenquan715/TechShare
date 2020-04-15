@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <!--Jquery UI-->
+    <link href="~/lib/jquery-ui/jquery-ui.css" rel="stylesheet" />
     <!-- Font Awesome CSS-->
     <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Custom icon font-->
@@ -43,7 +45,7 @@
                             <a asp-controller="Manager" asp-action="Member" class="nav-link ">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a asp-controller="Account" asp-action="Login" class="nav-link">Sign In</a>
+                            <a asp-controller="Account" asp-action="Signin" class="nav-link">Sign In</a>
                         </li>
                         <li class="nav-item">
                             <a asp-controller="Account" asp-action="Signup" class="nav-link ">Sign Up</a>
@@ -78,7 +80,8 @@
     </footer>
     <!-- JavaScript files-->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>    
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>

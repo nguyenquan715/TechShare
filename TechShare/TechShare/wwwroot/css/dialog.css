@@ -1,0 +1,33 @@
+﻿.ui-dialog{
+    padding:0;
+}
+.ui-widget.ui-widget-content{
+    border:1px solid var(--border-color);
+}
+.ui-widget-header {
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--primary-color);
+    color: white;
+}
+.ui-button, .ui-button:focus {
+    color: var(--primary-color);
+    border-color: var(--border-color);
+    background-color:white;
+}
+.ui-button:hover{
+    color:white;
+    background-color:var(--primary-color);
+}
+.ui-button:active{
+    color:white;
+    background-color:var(--primary-color);
+}
+#dialog-delete-post div {
+    display: flex;
+    align-items: center;
+}
+    #dialog-delete-post div i{
+        font-size:40px;
+        color:var(--primary-color);
+        margin-right:10px;
+    }
