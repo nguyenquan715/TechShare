@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using TechShare.Infra;
 using TechShare.Models;
 
 namespace TechShare.Controllers
@@ -43,28 +44,48 @@ namespace TechShare.Controllers
                     if (result.Succeeded)
                     {
                         HttpContext.Session.SetString("userData", JsonSerializer.Serialize<AppUser>(user));
-                        //User có role là admin
-                        if (await _userManager.IsInRoleAsync(user, "admin"))
-                        {
-                            return RedirectToAction("Index", "Admin");
-                        }
-                        //User có role là employee
-                        if(await _userManager.IsInRoleAsync(user, "employee"))
-                        {
-                            return RedirectToAction("Index", "Employee");
-                        }
-                        //User có role là member
-                        if(await _userManager.IsInRoleAsync(user, "member"))
-                        {
-                            return RedirectToAction("Index", "Member");
-                        }
-                        return RedirectToAction("Index", "Home");
+                        return await ViewByRole(user);
                     }
                 }
                 //Nếu đăng nhập thất bại
                 ModelState.AddModelError("", "Email hoặc mật khẩu không chính xác!");
             }
             return View(model);
+        }
+
+        /*Chuyển hướng theo role*/
+        [HttpGet]
+        public async Task<IActionResult> RedirectByRole()
+        {
+            //Nếu phiên đã tồn tại
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("userData")))
+            {
+                AppUser user = JsonSerializer.Deserialize<AppUser>(HttpContext.Session.GetString("userData"));
+                return await ViewByRole(user);
+            }
+            //Phiên đã hết hạn hoặc chưa tồn tại
+            return RedirectToAction("Signout");
+        }
+
+        /*Hiển thị trang theo role cua user*/
+        private async Task<IActionResult> ViewByRole(AppUser user)
+        {
+            //User có role là admin
+            if (await _userManager.IsInRoleAsync(user, RoleConstant.Admin))
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+            //User có role là employee
+            if (await _userManager.IsInRoleAsync(user, RoleConstant.Employee))
+            {
+                return RedirectToAction("Index", "Employee");
+            }
+            //User có role là member
+            if (await _userManager.IsInRoleAsync(user, RoleConstant.Member))
+            {
+                return RedirectToAction("Index", "Member");
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         /*Hiển thị trang đăng ký*/
@@ -98,8 +119,9 @@ namespace TechShare.Controllers
                     //Tạo thành công
                     if (result.Succeeded)
                     {
+                        //Gán quyền mặc định cho user là member
                         AppUser u = await _userManager.FindByEmailAsync(user.Email);
-                        var res = await _userManager.AddToRoleAsync(u, "member");
+                        var res = await _userManager.AddToRoleAsync(u, RoleConstant.Member);
                         if (res.Succeeded)
                         {
                             return RedirectToAction("Login");

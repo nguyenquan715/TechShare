@@ -7,11 +7,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using TechShare.Infra;
 using TechShare.Models;
 
 namespace TechShare.Controllers
 {
-    [Authorize(Roles ="admin")]
+    [Authorize(Roles =RoleConstant.Admin)]
     public class AdminController : Controller
     {
         private UserManager<AppUser> _userManager;
@@ -22,8 +23,13 @@ namespace TechShare.Controllers
         
         public IActionResult Index()
         {
-            AppUser user = JsonSerializer.Deserialize<AppUser>(HttpContext.Session.GetString("userData"));
-            return View(user);
+
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("userData")))
+            {
+                AppUser user = JsonSerializer.Deserialize<AppUser>(HttpContext.Session.GetString("userData"));
+                return View(user);
+            }
+            return RedirectToAction("Signout", "Account");
         }        
     }
 }

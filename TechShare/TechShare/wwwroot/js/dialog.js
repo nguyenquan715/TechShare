@@ -25,9 +25,6 @@ $("#dialog-delete-employee").dialog({
     height: "auto",
     modal: true   
 });
-$(".delete-employee").on("click", function () {
-    $("#dialog-delete-employee").dialog("open");
-});
 /*Dialog chi tiết thông tin nhân viên*/
 $("#dialog-detail-employee").dialog({
     autoOpen: false,

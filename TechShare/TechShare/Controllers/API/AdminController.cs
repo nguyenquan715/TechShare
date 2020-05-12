@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using TechShare.Infra;
 using TechShare.Models;
 
 namespace TechShare.Controllers.API
 {
     [Route("api/[controller]")]
-    [ApiController]
-    [Authorize(Roles="admin")]
+    [ApiController]    
     public class AdminController : ControllerBase
     {
         private UserManager<AppUser> _userManager;
@@ -31,7 +31,7 @@ namespace TechShare.Controllers.API
             List<AppUser> employees = new List<AppUser>();
             foreach(var user in _userManager.Users)
             {
-                if(await _userManager.IsInRoleAsync(user, "employee"))
+                if(await _userManager.IsInRoleAsync(user, RoleConstant.Employee))
                 {
                     employees.Add(user);
                 }
@@ -47,7 +47,7 @@ namespace TechShare.Controllers.API
             List<AppUser> members = new List<AppUser>();
             foreach (var user in _userManager.Users)
             {
-                if (await _userManager.IsInRoleAsync(user, "member"))
+                if (await _userManager.IsInRoleAsync(user, RoleConstant.Member))
                 {
                     members.Add(user);
                 }
