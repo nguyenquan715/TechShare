@@ -34,7 +34,12 @@ namespace TechShare
             })
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
-            services.ConfigureApplicationCookie(opts => opts.LoginPath = "/Account/Signin");
+            services.ConfigureApplicationCookie(opts => { 
+                opts.LoginPath = "/Account/Signin";
+                opts.LogoutPath = "/Account/Signout";                 
+            });
+            services.AddDistributedMemoryCache();
+            services.AddSession();
             services.AddControllersWithViews();
         }
 
@@ -56,6 +61,8 @@ namespace TechShare
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

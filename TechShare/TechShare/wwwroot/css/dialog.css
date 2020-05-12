@@ -22,12 +22,21 @@
     color:white;
     background-color:var(--primary-color);
 }
-#dialog-delete-post div {
+.dialog div {
     display: flex;
     align-items: center;
 }
-    #dialog-delete-post div i{
+    .dialog div i{
         font-size:40px;
         color:var(--primary-color);
         margin-right:10px;
     }
+    .dialog .data-group{
+        border-bottom:1px solid var(--border-color);
+        padding:5px;
+        display:flex;
+        justify-content:space-between;
+    }
+    .dialog .data-group:last-child{
+        border:none;        
+    }   

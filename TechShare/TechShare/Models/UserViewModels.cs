@@ -32,4 +32,13 @@ namespace TechShare.Models
         [Required(ErrorMessage = "Nhập lại mật khẩu là thông tin bắt buộc")]        
         public string ConfirmPassword { get; set; }
     }
+
+    public class SigninModel
+    {
+        [Required(ErrorMessage ="Email là thông tin bắt buộc")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Mật khẩu là thông tin bắt buộc")]
+        public string Password { get; set; }
+    }
 }

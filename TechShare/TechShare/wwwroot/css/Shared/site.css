@@ -46,3 +46,17 @@
 i{
     font-family:FontAwesome!important;
 }
+/*Table*/
+.table-custom{
+    border:1px solid var(--border-color);
+    border-collapse:collapse;
+}
+    .table-custom td, .table-custom th {
+        border: 1px solid var(--border-color);
+    }
+    .table-custom th{
+        background-color:var(--text-color);
+        color:white;
+        text-align:center;
+    }
+/*Dropdown - User Information*/

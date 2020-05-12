@@ -1,0 +1,61 @@
+﻿@model AppUser
+@{
+    ViewData["Title"] = "Trang cá nhân";        
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header content-between">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Trang cá nhân</h2>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content-between">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <partial name="/Views/Shared/_Profile.cshtml" />
+                </div>
+                <!-- /.col -->
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header p-2">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item"><a class="nav-link active" href="#posts" data-toggle="tab">Thông báo</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#posts" data-toggle="tab">Bài viết</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#posts" data-toggle="tab">Tương tác</a></li>
+                            </ul>
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <div class="active tab-pane" id="posts">
+                                    <!-- Post -->
+                                </div>
+                                <!-- /.tab-pane -->
+                            </div>
+                        </div><!-- /.card-body -->
+                    </div>
+                    <!-- /.nav-tabs-custom -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+
+@section Styles{
+    <style>
+        :root {
+            --primary-color: var(--warning-color);
+        }
+    </style>
+    <link href="~/css/Manager/manager.css" rel="stylesheet" />
+}

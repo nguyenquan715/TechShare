@@ -219,11 +219,7 @@ D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\TechSha
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\TechShare.csproj.CopyComplete
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\TechShare.dll
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\TechShare.pdb
-D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Manager\Member.cshtml.g.cs
-D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Manager\Employee.cshtml.g.cs
-D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Manager\Administrator.cshtml.g.cs
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Profile.cshtml.g.cs
-D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ManagerLayout.cshtml.g.cs
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -261,3 +257,8 @@ D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\runtime
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\TechShare.MvcApplicationPartsAssemblyInfo.cache
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Index.cshtml.g.cs
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Member\Index.cshtml.g.cs
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Home\AboutUs.cshtml.g.cs

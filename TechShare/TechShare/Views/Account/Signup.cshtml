@@ -9,14 +9,14 @@
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
-                        <div asp-validation-summary="All" class="text-danger"></div>
                         @*<div class="col-lg-5 d-none d-lg-block bg-register-image"></div>*@
                         <div class="col-md-12">
                             <div class="p-5">
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Tạo tài khoản</h1>
                                 </div>
-                                <form class="user" method="post" asp-controller="Account" asp-action="Signup">
+                                <div asp-validation-summary="All" class="text-danger ml-3"></div>
+                                <form class="user mt-3" method="post" asp-controller="Account" asp-action="Signup">
                                     <div class="form-group row">
                                         <div class="col-sm-6">
                                             <input asp-for="LastName" type="text" class="form-control" id="LastName" placeholder="Họ">

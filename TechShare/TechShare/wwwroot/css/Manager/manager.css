@@ -19,7 +19,7 @@ a{
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: none;    
 }
 
 a:focus {
@@ -133,3 +133,4 @@ a:focus {
     padding-right: 0;
     border-color:var(--border-color);
 }
+

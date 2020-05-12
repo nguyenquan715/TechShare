@@ -30,5 +30,12 @@ form.user{
 .bg-facebook {
     background-color: #3b5998;
 }
+.bg-access-denied {
+    width:100%;
+    min-height:700px;
+    background-image: url('../../content/img/error.jpg');
+    background-size:cover;
+    background-position:center;
+}
 
 
