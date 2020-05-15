@@ -38,6 +38,11 @@ namespace TechShare.Controllers
                 var user = await _userManager.FindByEmailAsync(model.Email);
                 if (user != null)
                 {
+                    //Kiểm tra xem user có bị chặn hay không
+                    if (user.Blocked)
+                    {
+                        return RedirectToAction("AccessDenied");
+                    }
                     await _signInManager.SignOutAsync();
                     var result = await _signInManager.PasswordSignInAsync(user, model.Password,true, false);
                     //Nếu đăng nhập thành công
@@ -124,7 +129,7 @@ namespace TechShare.Controllers
                         var res = await _userManager.AddToRoleAsync(u, RoleConstant.Member);
                         if (res.Succeeded)
                         {
-                            return RedirectToAction("Login");
+                            return RedirectToAction("Signin");
                         }
                         foreach (IdentityError err in res.Errors)
                         {

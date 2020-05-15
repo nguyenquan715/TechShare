@@ -9,6 +9,11 @@
     background-color: var(--primary-color);
     color: white;
 }
+.ui-group-button{
+    margin-top:20px;    
+    display:flex;
+    justify-content:flex-end;
+}
 .ui-button, .ui-button:focus {
     color: var(--primary-color);
     border-color: var(--border-color);

@@ -14,19 +14,8 @@ $("#dialog-delete-post").dialog({
         }
     }
 });
-$(".delete-post").on('click', function () {
-    $("#dialog-delete-post").dialog("open");
-});
-/*Dialog xóa nhân viên*/
-$("#dialog-delete-employee").dialog({
-    autoOpen: false,
-    resizable: false,
-    width: 400,
-    height: "auto",
-    modal: true   
-});
 /*Dialog chi tiết thông tin nhân viên*/
-$("#dialog-detail-employee").dialog({
+$("#dialog-detail").dialog({
     autoOpen: false,
     resizable: false,
     width: 400,
@@ -38,3 +27,22 @@ $("#dialog-detail-employee").dialog({
         }
     }
 });
+/*Dialog xóa nhân viên*/
+ConfigDialog("#dialog-delete-employee");
+/*Dialog thêm nhân viên*/
+ConfigDialog("#dialog-add-employee");
+/*Dialog chặn nhân viên*/
+ConfigDialog("#dialog-block-member");
+/*Dialog bỏ chặn nhân viên*/
+ConfigDialog("#dialog-unblock-member");
+
+
+function ConfigDialog(diaId) {
+    $(diaId).dialog({
+        autoOpen: false,
+        resizable: false,
+        width: 400,
+        height: "auto",
+        modal: true
+    });
+}

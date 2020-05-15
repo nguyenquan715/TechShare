@@ -12,5 +12,6 @@ namespace TechShare.Models
         public string FirstName { get; set; }
         public int Gender { get; set; }
         public string Job { get; set; }
+        public bool Blocked { get; set; }
     }
 }

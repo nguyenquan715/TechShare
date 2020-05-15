@@ -37,9 +37,9 @@ namespace TechShare
             services.ConfigureApplicationCookie(opts => { 
                 opts.LoginPath = "/Account/Signin";
                 opts.LogoutPath = "/Account/Signout";                 
-            });
+            });           
             services.AddDistributedMemoryCache();
-            services.AddSession();
+            services.AddSession();            
             services.AddControllersWithViews();
         }
 
