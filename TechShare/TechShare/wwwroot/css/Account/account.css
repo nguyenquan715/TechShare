@@ -14,16 +14,6 @@ form.user{
         form.user  select option{
            
         }
-.btn-custom{
-    border-radius:20px!important;
-    border:1px solid var(--border-color);
-    color:white;
-    padding:10px;
-}
-.btn-custom:focus{
-    color:white;
-    text-decoration:none;
-}
 .bg-google {
     background-color: #ea4335;
 }

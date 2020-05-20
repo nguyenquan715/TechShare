@@ -1,0 +1,10 @@
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Entity\bin\Debug\netcoreapp3.1\TechShare.Entity.deps.json
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Entity\bin\Debug\netcoreapp3.1\TechShare.Entity.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Entity\obj\Debug\netcoreapp3.1\TechShare.Entity.csprojAssemblyReference.cache
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Entity\obj\Debug\netcoreapp3.1\TechShare.Entity.AssemblyInfoInputs.cache
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Entity\obj\Debug\netcoreapp3.1\TechShare.Entity.AssemblyInfo.cs
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Entity\bin\Debug\netcoreapp3.1\TechShare.Entity.runtimeconfig.json
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Entity\bin\Debug\netcoreapp3.1\TechShare.Entity.runtimeconfig.dev.json
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Entity\bin\Debug\netcoreapp3.1\TechShare.Entity.pdb
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Entity\obj\Debug\netcoreapp3.1\TechShare.Entity.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Entity\obj\Debug\netcoreapp3.1\TechShare.Entity.pdb

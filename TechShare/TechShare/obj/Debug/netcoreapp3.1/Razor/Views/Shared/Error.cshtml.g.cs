@@ -26,8 +26,15 @@ using TechShare.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\Views\_ViewImports.cshtml"
+using TechShare.Entity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"28d1c57bb4e17ff3bc56ed8096a7965c35b9f9fe", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"df1de4130b8c2398c217a979e5b0f374e297ab15", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

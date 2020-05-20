@@ -26,8 +26,15 @@ using TechShare.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\Views\_ViewImports.cshtml"
+using TechShare.Entity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"951f6f964c2b8d6c9cc9be88ed135dd5fdc4ae49", @"/Views/Employee/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"28d1c57bb4e17ff3bc56ed8096a7965c35b9f9fe", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"df1de4130b8c2398c217a979e5b0f374e297ab15", @"/Views/_ViewImports.cshtml")]
     public class Views_Employee_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<AppUser>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("name", "/Views/Shared/_Profile.cshtml", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -85,7 +92,7 @@ using TechShare.Models;
             <div class=""row"">
                 <div class=""col-md-4"">
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "951f6f964c2b8d6c9cc9be88ed135dd5fdc4ae495064", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "951f6f964c2b8d6c9cc9be88ed135dd5fdc4ae495244", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -134,7 +141,7 @@ using TechShare.Models;
 ");
             DefineSection("Styles", async() => {
                 WriteLiteral("\r\n    <style>\r\n        :root {\r\n            --primary-color: var(--warning-color);\r\n        }\r\n    </style>\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "951f6f964c2b8d6c9cc9be88ed135dd5fdc4ae497864", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "951f6f964c2b8d6c9cc9be88ed135dd5fdc4ae498044", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

@@ -31,7 +31,7 @@ $(document).ready(function () {
     /*Xác nhận việc thêm nhân viên*/
     $(document).on("click", "#dialog-add-employee #dia-add-confirm", function () {        
         let me = $(this);
-        ConfirmDialog(me, url + "memtoemp/", "PUT", "#dialog-add-employee");
+        ConfirmDialog(me, url + "memtoemp/", "PUT", "#dialog-add-employee",1);
     });
 
     /**
@@ -47,7 +47,7 @@ $(document).ready(function () {
     /*Xác nhận việc thêm nhân viên*/
     $(document).on("click", "#dialog-delete-employee #dia-del-confirm", function () {        
         let me = $(this);
-        ConfirmDialog(me, url + "emptomem/", "PUT", "#dialog-delete-employee");
+        ConfirmDialog(me, url + "emptomem/", "PUT", "#dialog-delete-employee",1);
     });
 
     /**
@@ -63,7 +63,7 @@ $(document).ready(function () {
     /*Xác nhận việc chặn thành viên*/
     $(document).on("click", "#dialog-block-member #dia-block-confirm", function () {
         let me = $(this);
-        ConfirmDialog(me, url + "block/", "PUT", "#dialog-block-member");
+        ConfirmDialog(me, url + "block/", "PUT", "#dialog-block-member",0);
     });
 
     /**
@@ -79,7 +79,7 @@ $(document).ready(function () {
     /*Xác nhận việc bỏ chặn thành viên*/
     $(document).on("click", "#dialog-unblock-member #dia-unblock-confirm", function () {
         let me = $(this);
-        ConfirmDialog(me, url + "block/", "PUT", "#dialog-unblock-member");
+        ConfirmDialog(me, url + "block/", "PUT", "#dialog-unblock-member",0);
     });
 });
 /*Binding dữ liệu vào table*/
@@ -143,19 +143,26 @@ function CancelDialog(diaId, btnCancel) {
     });
 }
 /*Xác nhận tác vụ*/
-function ConfirmDialog(me,url,method,diaId) {
+function ConfirmDialog(me,url,method,diaId,mode) {
     let userId = me.data("UserID");
     $.ajax({
         method: method,
         url: url + userId
     }).done((res) => {
         $(diaId).dialog("close");
-        ResetTable("#tbl-employee");
+        //Nếu mode=1 thì reset lại cả hai bảng
+        //Nếu không thì chỉ reset lại bảng member
+        if (mode == 1) {
+            ResetTable("#tbl-employee");
+            GetAllUsersByRole("employee", "#tbl-employee");
+        }
         ResetTable("#tbl-member");
-        GetAllUsersByRole("employee", "#tbl-employee");
-        GetAllUsersByRole("member", "#tbl-member");
+        GetAllUsersByRole("member", "#tbl-member");        
         console.log(res);
     }).fail((err) => {
         console.log(err);
     });
+}
+function BindingError(componentId, err) {   
+    $(componentId + " .error").html(`<li>${err}</li>`);
 }

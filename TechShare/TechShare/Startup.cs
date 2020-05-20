@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TechShare.Models;
+using TechShare.Entity;
+using TechShare.Service;
+using TechShare.DAL;
 
 namespace TechShare
 {
@@ -29,6 +32,10 @@ namespace TechShare
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+            services.AddDbContext<TechShareDBContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
             services.AddIdentity<AppUser, IdentityRole>(options=> {
                 options.User.RequireUniqueEmail = true;                
             })
@@ -39,7 +46,10 @@ namespace TechShare
                 opts.LogoutPath = "/Account/Signout";                 
             });           
             services.AddDistributedMemoryCache();
-            services.AddSession();            
+            services.AddSession();
+            services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped(typeof(IPostService), typeof(PostService));
             services.AddControllersWithViews();
         }
 

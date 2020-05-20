@@ -1,0 +1,15 @@
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\bin\Debug\netcoreapp3.1\TechShare.DAL.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\bin\Debug\netcoreapp3.1\TechShare.Entity.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\obj\Debug\netcoreapp3.1\TechShare.BLL.csprojAssemblyReference.cache
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\obj\Debug\netcoreapp3.1\TechShare.BLL.AssemblyInfoInputs.cache
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\obj\Debug\netcoreapp3.1\TechShare.BLL.AssemblyInfo.cs
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\bin\Debug\netcoreapp3.1\TechShare.BLL.deps.json
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\bin\Debug\netcoreapp3.1\TechShare.BLL.runtimeconfig.json
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\bin\Debug\netcoreapp3.1\TechShare.BLL.runtimeconfig.dev.json
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\bin\Debug\netcoreapp3.1\TechShare.BLL.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\bin\Debug\netcoreapp3.1\TechShare.BLL.pdb
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\bin\Debug\netcoreapp3.1\TechShare.DAL.pdb
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\bin\Debug\netcoreapp3.1\TechShare.Entity.pdb
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\obj\Debug\netcoreapp3.1\TechShare.BLL.csproj.CopyComplete
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\obj\Debug\netcoreapp3.1\TechShare.BLL.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.BLL\obj\Debug\netcoreapp3.1\TechShare.BLL.pdb

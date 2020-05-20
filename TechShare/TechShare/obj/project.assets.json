@@ -2559,6 +2559,54 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TechShare.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.3",
+          "Microsoft.EntityFrameworkCore": "3.1.3",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3",
+          "TechShare.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TechShare.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TechShare.DAL.dll": {}
+        }
+      },
+      "TechShare.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.3",
+          "Microsoft.EntityFrameworkCore": "3.1.3",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3"
+        },
+        "compile": {
+          "bin/placeholder/TechShare.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TechShare.Entity.dll": {}
+        }
+      },
+      "TechShare.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.3",
+          "Microsoft.EntityFrameworkCore": "3.1.3",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3",
+          "TechShare.DAL": "1.0.0",
+          "TechShare.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TechShare.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TechShare.Service.dll": {}
+        }
       }
     }
   },
@@ -8335,6 +8383,21 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "TechShare.DAL/1.0.0": {
+      "type": "project",
+      "path": "../TechShare.DAL/TechShare.DAL.csproj",
+      "msbuildProject": "../TechShare.DAL/TechShare.DAL.csproj"
+    },
+    "TechShare.Entity/1.0.0": {
+      "type": "project",
+      "path": "../TechShare.Entity/TechShare.Entity.csproj",
+      "msbuildProject": "../TechShare.Entity/TechShare.Entity.csproj"
+    },
+    "TechShare.Service/1.0.0": {
+      "type": "project",
+      "path": "../TechShare.Service/TechShare.Service.csproj",
+      "msbuildProject": "../TechShare.Service/TechShare.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8343,7 +8406,10 @@
       "Microsoft.EntityFrameworkCore >= 3.1.3",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.3",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.2"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.2",
+      "TechShare.DAL >= 1.0.0",
+      "TechShare.Entity >= 1.0.0",
+      "TechShare.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8371,7 +8437,17 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\NAQ\\U3\\HKII\\Git\\TechShare\\TechShare\\TechShare.DAL\\TechShare.DAL.csproj": {
+              "projectPath": "D:\\NAQ\\U3\\HKII\\Git\\TechShare\\TechShare\\TechShare.DAL\\TechShare.DAL.csproj"
+            },
+            "D:\\NAQ\\U3\\HKII\\Git\\TechShare\\TechShare\\TechShare.Entity\\TechShare.Entity.csproj": {
+              "projectPath": "D:\\NAQ\\U3\\HKII\\Git\\TechShare\\TechShare\\TechShare.Entity\\TechShare.Entity.csproj"
+            },
+            "D:\\NAQ\\U3\\HKII\\Git\\TechShare\\TechShare\\TechShare.Service\\TechShare.Service.csproj": {
+              "projectPath": "D:\\NAQ\\U3\\HKII\\Git\\TechShare\\TechShare\\TechShare.Service\\TechShare.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

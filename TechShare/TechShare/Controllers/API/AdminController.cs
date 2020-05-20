@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TechShare.Infra;
+using TechShare.Entity;
 using TechShare.Models;
 
 namespace TechShare.Controllers.API
@@ -64,10 +65,13 @@ namespace TechShare.Controllers.API
         /*Lấy thông tin user theo ID*/
         [Route("{id}")]
         [HttpGet]
-        public async Task<AppUser> GetUserByID(string id)
+        public async Task<ActionResult> GetUserByID(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
-            return user;
+            if(user!=null) return Ok(user);
+            var response = new ResponseModel();
+            response.AddError(ErrorConstant.NoContentCode, ErrorConstant.NoContentMess);            
+            return Ok(response);
         }
 
         /*Thêm một thành viên thành nhân viên*/
@@ -85,14 +89,14 @@ namespace TechShare.Controllers.API
                     /*Thêm role employee*/
                     var result = await _userManager.AddToRoleAsync(user, RoleConstant.Employee);
                     if (result.Succeeded)
-                    {
-                        return Ok(new ResponseModel(200, "Thành công"));
+                    {                        
+                        return Ok(new ResponseModel(ErrorConstant.SucceedCode,ErrorConstant.SucceedMess));
                     }
-                    SetOfError(result);
+                    return Ok(SetOfError(result));
                 }
-                SetOfError(res);
+                return Ok(SetOfError(res));
             }
-            return Ok(new ResponseModel(404,"Không tìm thấy thành viên"));
+            return Ok(new ResponseModel(ErrorConstant.NoContentCode,ErrorConstant.NoContentMess));
         }
 
         /*Chuyển một nhân viên xuống thành viên*/
@@ -111,13 +115,13 @@ namespace TechShare.Controllers.API
                     var result = await _userManager.AddToRoleAsync(user, RoleConstant.Member);
                     if (result.Succeeded)
                     {
-                        return Ok(new ResponseModel(200, "Thành công"));
+                        return Ok(new ResponseModel(ErrorConstant.SucceedCode, ErrorConstant.SucceedMess));
                     }
-                    SetOfError(result);
+                    return Ok(SetOfError(result));
                 }
-                SetOfError(res);
+                return Ok(SetOfError(res));
             }
-            return Ok(new ResponseModel(404, "Không tìm thấy nhân viên"));
+            return Ok(new ResponseModel(ErrorConstant.NoContentCode, ErrorConstant.NoContentMess));
         }
 
         /*Chặn/bỏ chặn thành viên*/
@@ -129,18 +133,20 @@ namespace TechShare.Controllers.API
             if (user != null)
             {
                 user.Blocked = !user.Blocked;
-                var res=await _userManager.UpdateAsync(user);
-                if(res.Succeeded) return Ok(new ResponseModel(200, "Thành công"));
-                SetOfError(res);
+                var res = await _userManager.UpdateAsync(user);
+                if (res.Succeeded) return Ok(new ResponseModel(ErrorConstant.SucceedCode, ErrorConstant.SucceedMess));
+                return Ok(SetOfError(res));
             }
-            return Ok(new ResponseModel(404, "Không tìm thấy thành viên"));
-        }       
-        private void SetOfError(IdentityResult res)
+            return Ok(new ResponseModel(ErrorConstant.NoContentCode, ErrorConstant.NoContentMess));
+        }
+        private ResponseModel SetOfError(IdentityResult res)
         {
+            var response = new ResponseModel();
             foreach (IdentityError err in res.Errors)
-            {
-                ModelState.AddModelError("", err.Description);
+            {                
+                response.AddError(err.Code, err.Description);
             }
+            return response;
         }
     }
 }

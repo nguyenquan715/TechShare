@@ -262,3 +262,10 @@ D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\V
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Member\Index.cshtml.g.cs
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Home\AboutUs.cshtml.g.cs
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Editor.cshtml.g.cs
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\TechShare.DAL.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\TechShare.Entity.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\TechShare.DAL.pdb
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\TechShare.Entity.pdb
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\TechShare.Service.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\TechShare.Service.pdb

@@ -133,4 +133,14 @@ a:focus {
     padding-right: 0;
     border-color:var(--border-color);
 }
+#btn-submit-editor{
+    background-color:var(--primary-color);
+    color:white;
+    float:right;
+    border-radius:unset;
+}
+#btn-submit-editor:hover{
+    color:black;
+}
+
 

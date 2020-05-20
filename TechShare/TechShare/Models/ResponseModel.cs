@@ -6,13 +6,29 @@ using System.Threading.Tasks;
 namespace TechShare.Models
 {
     public class ResponseModel
-    {
-        public int StatusCode { get; set; }
-        public string Message { get; set; }
-        public ResponseModel(int code,string mess)
+    {       
+        public List<MessageModel> Response { get; set; }
+
+        public ResponseModel() {
+            this.Response = new List<MessageModel>();
+        }
+        public ResponseModel(List<MessageModel> res)
         {
-            StatusCode = code;
-            Message = mess;
+            this.Response = res;
+        }
+        public ResponseModel(string code,string mess)
+        {
+            this.Response = new List<MessageModel>();
+            this.AddError(code, mess);
+        }
+        public void AddError(string code,string mess)
+        {
+            var res = new MessageModel
+            {
+                Code = code,
+                Message = mess
+            };
+            this.Response.Add(res);          
         }
     }
 }

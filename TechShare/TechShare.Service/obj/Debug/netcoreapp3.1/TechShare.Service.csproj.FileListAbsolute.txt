@@ -1,0 +1,15 @@
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\bin\Debug\netcoreapp3.1\TechShare.Service.deps.json
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\bin\Debug\netcoreapp3.1\TechShare.Service.runtimeconfig.json
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\bin\Debug\netcoreapp3.1\TechShare.Service.runtimeconfig.dev.json
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\bin\Debug\netcoreapp3.1\TechShare.Service.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\bin\Debug\netcoreapp3.1\TechShare.Service.pdb
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\bin\Debug\netcoreapp3.1\TechShare.DAL.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\bin\Debug\netcoreapp3.1\TechShare.Entity.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\bin\Debug\netcoreapp3.1\TechShare.DAL.pdb
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\bin\Debug\netcoreapp3.1\TechShare.Entity.pdb
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\obj\Debug\netcoreapp3.1\TechShare.Service.csprojAssemblyReference.cache
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\obj\Debug\netcoreapp3.1\TechShare.Service.AssemblyInfoInputs.cache
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\obj\Debug\netcoreapp3.1\TechShare.Service.AssemblyInfo.cs
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\obj\Debug\netcoreapp3.1\TechShare.Service.csproj.CopyComplete
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\obj\Debug\netcoreapp3.1\TechShare.Service.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\obj\Debug\netcoreapp3.1\TechShare.Service.pdb
