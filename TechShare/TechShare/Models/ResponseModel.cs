@@ -7,23 +7,23 @@ namespace TechShare.Models
 {
     public class ResponseModel
     {       
-        public List<MessageModel> Response { get; set; }
+        public List<PayloadModel> Response { get; set; }
 
         public ResponseModel() {
-            this.Response = new List<MessageModel>();
+            this.Response = new List<PayloadModel>();
         }
-        public ResponseModel(List<MessageModel> res)
+        public ResponseModel(List<PayloadModel> res)
         {
             this.Response = res;
         }
         public ResponseModel(string code,string mess)
         {
-            this.Response = new List<MessageModel>();
+            this.Response = new List<PayloadModel>();
             this.AddError(code, mess);
         }
         public void AddError(string code,string mess)
         {
-            var res = new MessageModel
+            var res = new PayloadModel
             {
                 Code = code,
                 Message = mess

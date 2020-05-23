@@ -6,22 +6,24 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div>
-                            <div class="text-center">
-                                <h1 class="h4 text-gray mb-4">Bài viết mới</h1>
-                            </div>
-                            <div class="text-danger ml-3" asp-validation-summary="ModelOnly"></div>
-                            <form class="new-post mt-3" method="post">
+                            <div class="text-danger ml-3 error"></div>
+                            <form class="new-post mt-3">
                                 <div class="form-group">
                                     <input class="form-control" id="InputTitle" placeholder="Tiêu đề">
+                                </div>                                
+                                <div class="form-group">
+                                    <select class="select-custom" multiple data-live-search="true" data-max-options="3" title="Thể loại" id="InputCategory">
+                                        <!--Binding data-->                                        
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" id="InputCategory" placeholder="Thể loại">
+                                    <textarea rows="20" class="form-control ck-editor" id="InputContent" placeholder="Nhập nội dung bài viết của bạn vào đây..."></textarea>
                                 </div>
-                                <div class="form-group">                                    
-                                    <textarea rows="50" class="form-control ck-editor" id="InputContent" placeholder="Nhập nội dung bài viết của bạn vào đây..."></textarea>
+                                <div class="d-flex justify-content-end">
+                                    <div class="btn btn-primary-custom mr-3" id="btn-save-post">Lưu bài viết</div>
+                                    <div class="btn btn-primary-custom" id="btn-submit-post">Gửi bài viết</div>
                                 </div>
-                                <button class="btn" id="btn-submit-editor" type="submit">Gửi bài viết</button>
-                            </form>                            
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -16,7 +16,7 @@ $("#dialog-delete-post").dialog({
 });
 /*Dialog chi tiết thông tin nhân viên*/
 $("#dialog-detail").dialog({
-    autoOpen: false,
+    autoOpen: false,        
     resizable: false,
     width: 400,
     height: "auto",
@@ -28,21 +28,33 @@ $("#dialog-detail").dialog({
     }
 });
 /*Dialog xóa nhân viên*/
-ConfigDialog("#dialog-delete-employee");
+ConfigDialog("#dialog-delete-employee", 400,"auto");
 /*Dialog thêm nhân viên*/
-ConfigDialog("#dialog-add-employee");
+ConfigDialog("#dialog-add-employee", 400, "auto");
 /*Dialog chặn nhân viên*/
-ConfigDialog("#dialog-block-member");
+ConfigDialog("#dialog-block-member", 400, "auto");
 /*Dialog bỏ chặn nhân viên*/
-ConfigDialog("#dialog-unblock-member");
+ConfigDialog("#dialog-unblock-member", 400, "auto");
+/*Dialog trạng thái tác vụ*/
+$("#dialog-action-status").dialog({
+    autoOpen: false,
+    resizable: false,
+    width: 400,
+    height: "auto",
+    modal: true,
+    buttons: {
+        "Ok": function () {
+            $(this).dialog("close");
+        }
+    }
+});
 
-
-function ConfigDialog(diaId) {
+function ConfigDialog(diaId, width, height) {
     $(diaId).dialog({
         autoOpen: false,
         resizable: false,
-        width: 400,
-        height: "auto",
+        width: width,
+        height: height,        
         modal: true
     });
 }

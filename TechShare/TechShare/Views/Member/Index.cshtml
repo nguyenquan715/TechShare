@@ -29,13 +29,16 @@
                                 <li class="nav-item"><a class="nav-link active" href="#member-posts" data-toggle="tab">Bài viết</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#member-notifi" data-toggle="tab">Thông báo</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#member-behavior" data-toggle="tab">Tương tác</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#member-new-post" data-toggle="tab">Bài viết mới</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#member-create-post" data-toggle="tab">Bài viết mới</a></li>
                             </ul>
                         </div><!-- /.card-header -->
                         <div class="card-body">
                             <div class="tab-content">
                                 <div class="tab-pane active" id="member-posts">
                                     <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <button class="btn btn-primary-custom" id="btn-create-post"><i class="fa-plus mr-2"></i><span>Bài viết mới</span></button>
+                                        </div>
                                         @for (int i = 0; i < 5; i++)
                                         {
                                             <div class="col-md-12 mb-3">
@@ -74,14 +77,19 @@
                                 <div class="tab-pane" id="member-behavior">
 
                                 </div>
-                                <div class="tab-pane" id="member-new-post">
+                                <div class="tab-pane" id="member-create-post">
                                     <partial name="/Views/Shared/_Editor.cshtml" />
                                 </div>
                                 <!-- /.tab-pane -->
                             </div>
+                            <!--Dialog xóa bài viết-->
                             <div id="dialog-delete-post" class="dialog" title="Xóa bài viết ?">
                                 <div><i class="fa fa-question-circle"></i><span>Bạn có chắc chắn muốn xóa bài viết này ?</span></div>
                             </div>
+                            <!--Dialog tác vụ thành công, thất bại-->
+                            <div id="dialog-action-status" class="dialog">
+                                <div><i class="fa fa-info-circle"></i><span id="dia-content"></span></div>
+                            </div>                            
                         </div><!-- /.card-body -->
                     </div>
                     <!-- /.nav-tabs-custom -->
@@ -100,9 +108,12 @@
             --primary-color: var(--info-color);
         }
     </style>
+    <link href="~/lib/bootstrap-select-1.13.14/dist/css/bootstrap-select.css" rel="stylesheet" />
     <link href="~/css/Manager/manager.css" rel="stylesheet" />
 }
 @section Scripts{
-    <script src='https://cdn.tiny.cloud/1/5d2z89547m3ttjlg4jxldk9zjs3o6npiz73jj66abqezp8z1/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>   
+    <script src="~/lib/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script src="~/lib/bootstrap-select-1.13.14/js/bootstrap-select.js"></script>
     <script src="~/js/editor.js"></script>
+    <script src="~/js/member.js"></script>
 }

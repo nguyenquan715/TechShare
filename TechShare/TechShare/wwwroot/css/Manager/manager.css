@@ -142,5 +142,16 @@ a:focus {
 #btn-submit-editor:hover{
     color:black;
 }
-
+.btn-primary-custom{
+    color:white;
+    background-color:var(--primary-color);
+    border:1px solid var(--border-color);
+}
+.btn-primary-custom:hover{
+    color:black;
+}
+.select-custom{
+    border:1px solid var(--border-color);
+    width:100%!important;      
+}
 

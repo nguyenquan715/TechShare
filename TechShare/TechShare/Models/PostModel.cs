@@ -20,6 +20,8 @@ namespace TechShare.Models
         [Required]
         public int Status { get; set; }
 
+        public DateTime? SubmitedAt { get; set; }
+
         [Required]
         public string UserId { get; set; }
     }

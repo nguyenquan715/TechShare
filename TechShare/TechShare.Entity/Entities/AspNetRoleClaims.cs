@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TechShare.Entity
-{
+namespace TechShare.Entity 
+{ 
     public partial class AspNetRoleClaims
     {
         public int Id { get; set; }

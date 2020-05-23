@@ -50,6 +50,7 @@ namespace TechShare.Controllers
                     if (result.Succeeded)
                     {
                         HttpContext.Session.SetString("userData", JsonSerializer.Serialize<AppUser>(user));
+                        HttpContext.Session.SetString("userId", user.Id.ToString());
                         return await ViewByRole(user);
                     }
                 }

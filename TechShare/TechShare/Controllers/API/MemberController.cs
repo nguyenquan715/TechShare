@@ -37,7 +37,7 @@ namespace TechShare.Controllers.API
         /*Tạo bài viết mới*/
         [Route("newpost")]
         [HttpPost]
-        public async Task<ActionResult> CreateNewPost(PostModel model)
+        public async Task<ActionResult> CreateNewPost([FromBody]PostModel model)
         {
             if (ModelState.IsValid)
             {
@@ -53,6 +53,10 @@ namespace TechShare.Controllers.API
                         if (!user.Blocked)
                         {
                             var id = Guid.NewGuid();
+                            string userId= model.UserId;
+                            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("userId"))){
+                                userId = HttpContext.Session.GetString("userId");
+                            }                           
                             Posts post = new Posts
                             {
                                 Id = id,
@@ -60,9 +64,10 @@ namespace TechShare.Controllers.API
                                 Status = model.Status,
                                 CreatedAt = DateTime.Now,
                                 UpdatedAt = DateTime.Now,
+                                SubmitedAt=model.SubmitedAt,
                                 PublishedAt = null,
                                 Content = model.Content,
-                                UserId = model.UserId
+                                UserId = userId
                             };
                             List<PostCategories> categories = new List<PostCategories>();
                             foreach (var categoryID in model.CategoriesID)

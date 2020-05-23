@@ -31,7 +31,7 @@ namespace TechShare.Entity
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=NAQ\\SQLEXPRESS;Database=TechShareDB;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=naq\\sqlexpress;Database=TechShareDB;Trusted_Connection=True;");
             }
         }
 
@@ -133,23 +133,18 @@ namespace TechShare.Entity
 
             modelBuilder.Entity<Categories>(entity =>
             {
-                entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasDefaultValueSql("(newid())");
+                entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.Description).HasMaxLength(450);
 
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .HasMaxLength(100);
             });
 
             modelBuilder.Entity<PostCategories>(entity =>
             {
                 entity.HasKey(e => new { e.PostId, e.CategoryId });
-
-                entity.Property(e => e.PostId).HasColumnName("PostID");
-
-                entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.PostCategories)
@@ -164,13 +159,9 @@ namespace TechShare.Entity
 
             modelBuilder.Entity<Posts>(entity =>
             {
-                entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasDefaultValueSql("(newid())");
+                entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
 
-                entity.Property(e => e.Content)
-                    .IsRequired()
-                    .IsUnicode(false);
+                entity.Property(e => e.Content).IsRequired();
 
                 entity.Property(e => e.CreatedAt)
                     .HasColumnType("datetime")
@@ -178,10 +169,11 @@ namespace TechShare.Entity
 
                 entity.Property(e => e.PublishedAt).HasColumnType("datetime");
 
+                entity.Property(e => e.SubmitedAt).HasColumnType("datetime");
+
                 entity.Property(e => e.Title)
                     .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .HasMaxLength(450);
 
                 entity.Property(e => e.UpdatedAt)
                     .HasColumnType("datetime")
@@ -189,13 +181,12 @@ namespace TechShare.Entity
 
                 entity.Property(e => e.UserId)
                     .IsRequired()
-                    .HasColumnName("UserID")
                     .HasMaxLength(450);
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Posts)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK_Posts_AppUsers");
+                    .HasConstraintName("FK_Posts_AspNetUsers");
             });
 
             OnModelCreatingPartial(modelBuilder);
