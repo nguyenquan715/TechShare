@@ -1,0 +1,76 @@
+﻿@model PostViewModel
+@{
+    ViewData["Title"] = "Sửa bài viết";
+}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header content-between">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Sửa bài viết</h2>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content-between">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card o-hidden border-0">
+                        <div class="card-body p-0">
+                            <!-- Nested Row within Card Body -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div>
+                                        <div class="text-danger ml-3 error"></div>
+                                        <form class="edit-post mt-3">
+                                            <div class="form-group">
+                                                <input class="form-control" id="EditTitle" placeholder="Tiêu đề" value=@Model.Title>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="select-custom" multiple data-live-search="true" data-max-options="3" title="Thể loại" id="EditCategory">
+                                                    <!--Binding data-->
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control ck-editor" id="EditAvatar" placeholder="Ảnh đại diện" value=@Model.Avatar/>
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea rows="20" class="form-control ck-editor" id="EditContent" placeholder="Nhập nội dung bài viết của bạn vào đây..."></textarea>
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <div class="btn btn-primary-custom mr-3" id="btn-save-edit-post">Lưu bài viết</div>
+                                                <div class="btn btn-primary-custom" id="btn-submit-edit-post">Gửi bài viết</div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+
+@section Styles{
+    <style>
+        :root {
+            --primary-color: var(--info-color);
+        }
+    </style>
+    <link href="~/lib/bootstrap-select-1.13.14/dist/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="~/css/Manager/manager.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="~/lib/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script src="~/lib/bootstrap-select-1.13.14/js/bootstrap-select.js"></script>
+    <script src="~/js/editor.js"></script>
+    <script src="~/js/member.js"></script>
+}

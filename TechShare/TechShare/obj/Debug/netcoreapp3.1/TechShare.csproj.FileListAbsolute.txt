@@ -255,7 +255,6 @@ D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\runtime
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\TechShare.MvcApplicationPartsAssemblyInfo.cache
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Index.cshtml.g.cs
@@ -269,3 +268,8 @@ D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\TechSha
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\TechShare.Entity.pdb
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\TechShare.Service.dll
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\TechShare.Service.pdb
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\TechShare.MvcApplicationPartsAssemblyInfo.cache
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\TechShare.csproj.CoreCompileInputs.cache
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\TechShare.genruntimeconfig.cache
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Member\EditPost.cshtml.g.cs

@@ -124,10 +124,6 @@ var GetAllUsersByRole = function (role,tblId) {
         console.log(err);
     });
 }
-/*Reset table*/
-function ResetTable(tblId) {
-    $(tblId + " tbody").empty();
-}
 /*Hiển thị Dialog*/
 function DisplayDialog(me,diaId,nameId,btnConf) {
     $(diaId).dialog("open");
@@ -136,12 +132,7 @@ function DisplayDialog(me,diaId,nameId,btnConf) {
     $(diaId + " " + nameId).text(userName);
     $(diaId + " " + btnConf).data("UserID", userId);
 }
-/*Không xác nhận tác vụ*/
-function CancelDialog(diaId, btnCancel) {
-    $(document).on("click", diaId + " " + btnCancel, function () {
-        $(diaId).dialog("close");
-    });
-}
+
 /*Xác nhận tác vụ*/
 function ConfirmDialog(me,url,method,diaId,mode) {
     let userId = me.data("UserID");

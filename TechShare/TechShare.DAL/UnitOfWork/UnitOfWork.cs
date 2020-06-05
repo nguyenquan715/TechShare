@@ -1,7 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Text;
+using System.Threading.Tasks;
 using TechShare.Entity;
 
 namespace TechShare.DAL
@@ -22,7 +26,7 @@ namespace TechShare.DAL
         }
         public void CreateTransaction()
         {
-            _transaction = _context.Database.BeginTransaction();
+            _transaction = _context.Database.BeginTransaction();            
         }
         public void Commit()
         {
@@ -41,6 +45,6 @@ namespace TechShare.DAL
         {
             _context.Dispose();
             GC.SuppressFinalize(this);
-        }
+        }        
     }
 }

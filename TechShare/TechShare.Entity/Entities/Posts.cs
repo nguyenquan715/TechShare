@@ -19,6 +19,7 @@ namespace TechShare.Entity
         public DateTime? PublishedAt { get; set; }
         public int Status { get; set; }
         public string UserId { get; set; }
+        public string Avatar { get; set; }
 
         public virtual AspNetUsers User { get; set; }
         public virtual ICollection<PostCategories> PostCategories { get; set; }

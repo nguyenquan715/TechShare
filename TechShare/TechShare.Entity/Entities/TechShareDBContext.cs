@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Dynamic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -30,7 +31,6 @@ namespace TechShare.Entity
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=naq\\sqlexpress;Database=TechShareDB;Trusted_Connection=True;");
             }
         }
@@ -161,6 +161,10 @@ namespace TechShare.Entity
             {
                 entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
 
+                entity.Property(e => e.Avatar)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.Content).IsRequired();
 
                 entity.Property(e => e.CreatedAt)
@@ -188,7 +192,7 @@ namespace TechShare.Entity
                     .HasForeignKey(d => d.UserId)
                     .HasConstraintName("FK_Posts_AspNetUsers");
             });
-
+            modelBuilder.Query<ExpandoObject>();
             OnModelCreatingPartial(modelBuilder);
         }
 

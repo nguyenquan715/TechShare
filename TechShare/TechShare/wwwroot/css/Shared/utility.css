@@ -20,3 +20,6 @@
 button.submit .icon-search {
     margin-right: 10px;
 }
+.post .post-details .post-meta .category span {
+    color: var(--theme-color);
+}

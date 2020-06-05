@@ -43,5 +43,5 @@
         noneditable_noneditable_class: "mceNonEditable",
         toolbar_mode: 'sliding',
         contextmenu: "link image imagetools table",
-    });
+    });   
 });

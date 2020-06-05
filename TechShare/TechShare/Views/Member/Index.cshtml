@@ -39,36 +39,7 @@
                                         <div class="col-md-6 mb-3">
                                             <button class="btn btn-primary-custom" id="btn-create-post"><i class="fa-plus mr-2"></i><span>Bài viết mới</span></button>
                                         </div>
-                                        @for (int i = 0; i < 5; i++)
-                                        {
-                                            <div class="col-md-12 mb-3">
-                                                <div class="card card-border shadow">
-                                                    <div class="row">
-                                                        <div class="col-md-10">
-                                                            <div class="card card-border card-post">
-                                                                <div class="card-header">
-                                                                    <a class="card-title" asp-controller="Home" asp-action="Post">Các nhà khoa học tiến hành thám hiểm một khu rừng cổ xưa 60 nghìn năm tuổi chìm dưới biển</a>
-                                                                </div>
-                                                                <div class="card-body card-info">
-                                                                    <div class="card-info-first text-muted">
-                                                                        <div class="status-post">Đã đăng</div>
-                                                                        <div class="date-post">09/04/2020</div>
-                                                                    </div>
-                                                                    <div class="card-info-second">
-                                                                        <div class="categories-post">Technology | Business</div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-2 card-tool">
-                                                            <a title="Xem bài viết" class="btn-tool detail-post" asp-controller="Home" asp-action="Post"><i class="fa fa-eye"></i></a>
-                                                            <a title="Sửa bài viết" class="btn-tool edit-post" href="#"><i class="fa fa-edit"></i></a>
-                                                            <a title="Xóa bài viết" class="btn-tool delete-post" href="#"><i class="fa fa-trash"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        }
+                                        <div id="list-posts"></div>                                                                                
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="member-notifi">
@@ -85,6 +56,10 @@
                             <!--Dialog xóa bài viết-->
                             <div id="dialog-delete-post" class="dialog" title="Xóa bài viết ?">
                                 <div><i class="fa fa-question-circle"></i><span>Bạn có chắc chắn muốn xóa bài viết này ?</span></div>
+                                <div class="ui-group-button">
+                                    <button class="ui-button mr-3" id="dia-del-post-confirm">Xác nhận</button>
+                                    <button class="ui-button" id="dia-del-post-cancel">Hủy bỏ</button>
+                                </div>
                             </div>
                             <!--Dialog tác vụ thành công, thất bại-->
                             <div id="dialog-action-status" class="dialog">

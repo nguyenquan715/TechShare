@@ -1,20 +1,4 @@
-﻿/*Dialog xóa bài viết*/
-$("#dialog-delete-post").dialog({
-    autoOpen: false,
-    resizable: false,
-    width: 400,
-    height: "auto",
-    modal: true,   
-    buttons: {
-        "Xác nhận": function () {
-            $(this).dialog("close");
-        },
-        "Hủy bỏ": function () {
-            $(this).dialog("close");
-        }
-    }
-});
-/*Dialog chi tiết thông tin nhân viên*/
+﻿/*Dialog chi tiết thông tin nhân viên*/
 $("#dialog-detail").dialog({
     autoOpen: false,        
     resizable: false,
@@ -27,6 +11,8 @@ $("#dialog-detail").dialog({
         }
     }
 });
+/*Dialog xóa bài viết*/
+ConfigDialog("#dialog-delete-post", 400, "auto");
 /*Dialog xóa nhân viên*/
 ConfigDialog("#dialog-delete-employee", 400,"auto");
 /*Dialog thêm nhân viên*/

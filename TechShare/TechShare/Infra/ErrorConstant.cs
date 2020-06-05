@@ -12,11 +12,13 @@ namespace TechShare.Infra
         public const string InvalidModelCode = "InvalidModel";       
         public const string UserBlockedCode = "UserBlocked";
         public const string NotInRoleCode = "NotInRole";
+        public const string NotAuthorOfPostCode = "NotAuthorOfPost";
 
         public const string SucceedMess = "Thành công";
         public const string NoContentMess = "Không tìm thấy dữ liệu";
         public const string InvalidModelMess = "Model Invalid";        
         public const string UserBlockedMess = "Người dùng đã bị chặn";
         public const string NotInRoleMess = "Người dùng không có ca sử dụng này";
+        public const string NotAuthorOfPostMess = "Không phải tác giả của bài viết";
     }
 }

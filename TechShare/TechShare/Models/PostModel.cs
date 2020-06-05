@@ -15,6 +15,9 @@ namespace TechShare.Models
         public List<Guid> CategoriesID { get; set; }
 
         [Required]
+        public string Avatar { get; set; }
+
+        [Required]
         public string Content { get; set; }
 
         [Required]

@@ -13,3 +13,5 @@ D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\obj\Debug\netcoreapp3.1
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\obj\Debug\netcoreapp3.1\TechShare.Service.csproj.CopyComplete
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\obj\Debug\netcoreapp3.1\TechShare.Service.dll
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\obj\Debug\netcoreapp3.1\TechShare.Service.pdb
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\obj\Debug\netcoreapp3.1\TechShare.Service.csproj.CoreCompileInputs.cache
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare.Service\obj\Debug\netcoreapp3.1\TechShare.Service.genruntimeconfig.cache

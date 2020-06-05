@@ -49,6 +49,7 @@ namespace TechShare
             services.AddSession();
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IBaseDAL>(s => new BaseDAL(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped(typeof(IPostService), typeof(PostService));
             services.AddControllersWithViews();
         }
