@@ -17,5 +17,8 @@ namespace TechShare.Service
         IEnumerable<object> GetListPostsPublished(int begin, int end);
         void DeletePost(Guid postId);
         int CheckPostOfUser(Guid postId, string userId);
+        int NumberOfPublishedPosts();
+        IEnumerable<object> GetPublishedPostsByTitle(string keyword);
+        IEnumerable<object> GetPostsOfAuthor(string userId);
     }
 }

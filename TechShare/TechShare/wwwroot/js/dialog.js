@@ -5,6 +5,9 @@ $("#dialog-detail").dialog({
     width: 400,
     height: "auto",
     modal: true,
+    position: {
+        of: '#tab-content-dialog'
+    },
     buttons: {
         "Ok": function () {
             $(this).dialog("close");
@@ -28,6 +31,9 @@ $("#dialog-action-status").dialog({
     width: 400,
     height: "auto",
     modal: true,
+    position: {
+        of: '#tab-content-dialog'
+    },
     buttons: {
         "Ok": function () {
             $(this).dialog("close");
@@ -41,6 +47,9 @@ function ConfigDialog(diaId, width, height) {
         resizable: false,
         width: width,
         height: height,        
-        modal: true
+        modal: true,
+        position: {            
+            of: '#tab-content-dialog'
+        }
     });
 }

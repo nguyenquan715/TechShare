@@ -1,12 +1,12 @@
-<aside class="col-lg-4">
+<aside class="col-md-4">
   <!-- Widget [Search Bar Widget]-->
   <div class="widget search">
     <header>
       <h3 class="h6">Tìm kiếm bài viết</h3>
     </header>
-    <form action="#" class="search-form">
+    <form method="post" asp-controller="Home" asp-action="Search" class="search-form">
       <div class="form-group">
-        <input type="search" placeholder="Bạn đang tìm kiếm cái gì?">
+        <input type="search" placeholder="Bạn đang tìm kiếm cái gì?" name="keyword">
         <button type="submit" class="submit"><i class="icon-search"></i></button>
       </div>
     </form>

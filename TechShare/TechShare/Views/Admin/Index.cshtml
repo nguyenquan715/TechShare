@@ -1,6 +1,7 @@
-﻿@model  AppUser
-@{    
-    ViewData["Title"] = "Trang cá nhân";        
+﻿@model AppUser
+@{
+    ViewData["Title"] = "Trang cá nhân";
+    ViewData["UserAuthenticated"]= "active";
 }
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -32,7 +33,7 @@
                             </ul>
                         </div><!-- /.card-header -->
                         <div class="card-body">
-                            <div class="tab-content">
+                            <div class="tab-content" id="tab-content-dialog">
                                 <div class="active tab-pane" id="posts">
                                     <!-- Post -->
                                 </div>
@@ -71,56 +72,6 @@
                             </div>
                         </div><!-- /.card-body -->
                     </div>
-                    <!--Dialog delete employee-->
-                    <div id="dialog-delete-employee" class="dialog" title="Xóa nhân viên ?">
-                        <div><i class="fa fa-question-circle"></i><span>Bạn có chắc chắn muốn xóa nhân viên <b id="dia-employee-name"></b> ?</span></div>
-                        <div class="ui-group-button">
-                            <button class="ui-button mr-3" id="dia-del-confirm">Xác nhận</button>
-                            <button class="ui-button" id="dia-del-cancel">Hủy bỏ</button>
-                        </div>
-                    </div>
-                    <!--Dialog add employee-->
-                    <div id="dialog-add-employee" class="dialog" title="Thêm nhân viên ?">
-                        <div><i class="fa fa-question-circle"></i><span>Bạn có chắc chắn muốn thêm <b id="dia-member-name"></b> thành nhân viên ?</span></div>
-                        <div class="ui-group-button">
-                            <button class="ui-button mr-3" id="dia-add-confirm">Xác nhận</button>
-                            <button class="ui-button" id="dia-add-cancel">Hủy bỏ</button>
-                        </div>
-                    </div>
-                    <!--Dialog block member-->
-                    <div id="dialog-block-member" class="dialog" title="Chặn thành viên ?">
-                        <div><i class="fa fa-question-circle"></i><span>Bạn có chắc chắn muốn chặn thành viên <b id="dia-member-name"></b> ?</span></div>
-                        <div class="ui-group-button">
-                            <button class="ui-button mr-3" id="dia-block-confirm">Xác nhận</button>
-                            <button class="ui-button" id="dia-block-cancel">Hủy bỏ</button>
-                        </div>
-                    </div>
-                    <!--Dialog unblock member-->
-                    <div id="dialog-unblock-member" class="dialog" title="Bỏ chặn thành viên ?">
-                        <div><i class="fa fa-question-circle"></i><span>Bạn có chắc chắn muốn bỏ chặn thành viên <b id="dia-member-name"></b> ?</span></div>
-                        <div class="ui-group-button">
-                            <button class="ui-button mr-3" id="dia-unblock-confirm">Xác nhận</button>
-                            <button class="ui-button" id="dia-unblock-cancel">Hủy bỏ</button>
-                        </div>
-                    </div>
-                    <!--Dialog detail-->
-                    <div id="dialog-detail" class="dialog" title="Thông tin chi tiết">
-                        <div class="data-group">
-                            <strong>Họ và tên: </strong><span id="dia-fullname"></span>
-                        </div>
-                        <div class="data-group">
-                            <strong>Nickname: </strong><span id="dia-nickname"></span>
-                        </div>
-                        <div class="data-group">
-                            <strong>Email: </strong><span id="dia-email"></span>
-                        </div>
-                        <div class="data-group">
-                            <strong>Giới tính: </strong><span id="dia-gender"></span>
-                        </div>
-                        <div class="data-group">
-                            <strong>Nghề nghiệp: </strong><span id="dia-job"></span>
-                        </div>
-                    </div>
                 </div>
                 <!-- /.col -->
             </div>
@@ -128,6 +79,56 @@
         </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
+    <!--Dialog delete employee-->
+    <div id="dialog-delete-employee" class="dialog" title="Xóa nhân viên ?">
+        <div><i class="fa fa-question-circle"></i><span>Bạn có chắc chắn muốn xóa nhân viên <b id="dia-employee-name"></b> ?</span></div>
+        <div class="ui-group-button">
+            <button class="ui-button mr-3" id="dia-del-confirm">Xác nhận</button>
+            <button class="ui-button" id="dia-del-cancel">Hủy bỏ</button>
+        </div>
+    </div>
+    <!--Dialog add employee-->
+    <div id="dialog-add-employee" class="dialog" title="Thêm nhân viên ?">
+        <div><i class="fa fa-question-circle"></i><span>Bạn có chắc chắn muốn thêm <b id="dia-member-name"></b> thành nhân viên ?</span></div>
+        <div class="ui-group-button">
+            <button class="ui-button mr-3" id="dia-add-confirm">Xác nhận</button>
+            <button class="ui-button" id="dia-add-cancel">Hủy bỏ</button>
+        </div>
+    </div>
+    <!--Dialog block member-->
+    <div id="dialog-block-member" class="dialog" title="Chặn thành viên ?">
+        <div><i class="fa fa-question-circle"></i><span>Bạn có chắc chắn muốn chặn thành viên <b id="dia-member-name"></b> ?</span></div>
+        <div class="ui-group-button">
+            <button class="ui-button mr-3" id="dia-block-confirm">Xác nhận</button>
+            <button class="ui-button" id="dia-block-cancel">Hủy bỏ</button>
+        </div>
+    </div>
+    <!--Dialog unblock member-->
+    <div id="dialog-unblock-member" class="dialog" title="Bỏ chặn thành viên ?">
+        <div><i class="fa fa-question-circle"></i><span>Bạn có chắc chắn muốn bỏ chặn thành viên <b id="dia-member-name"></b> ?</span></div>
+        <div class="ui-group-button">
+            <button class="ui-button mr-3" id="dia-unblock-confirm">Xác nhận</button>
+            <button class="ui-button" id="dia-unblock-cancel">Hủy bỏ</button>
+        </div>
+    </div>
+    <!--Dialog detail-->
+    <div id="dialog-detail" class="dialog" title="Thông tin chi tiết">
+        <div class="data-group">
+            <strong>Họ và tên: </strong><span id="dia-fullname"></span>
+        </div>
+        <div class="data-group">
+            <strong>Nickname: </strong><span id="dia-nickname"></span>
+        </div>
+        <div class="data-group">
+            <strong>Email: </strong><span id="dia-email"></span>
+        </div>
+        <div class="data-group">
+            <strong>Giới tính: </strong><span id="dia-gender"></span>
+        </div>
+        <div class="data-group">
+            <strong>Nghề nghiệp: </strong><span id="dia-job"></span>
+        </div>
+    </div>
 </div>
 @section Scripts{
     <script src="~/js/admin.js"></script>

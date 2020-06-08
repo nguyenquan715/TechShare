@@ -19,5 +19,11 @@ namespace TechShare.DAL
             if (result != null) return 1;
             return 0;
         }
+
+        public int NumberOfPublishedPosts()
+        {
+            var result = _context.Posts.Where(p => p.Status == 2);
+            return result.Count();
+        }
     }
 }

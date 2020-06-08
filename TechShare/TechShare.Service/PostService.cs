@@ -113,5 +113,39 @@ namespace TechShare.Service
         {
             return _uow.PostRepository.CheckPostOfUser(postId, userId);
         }
+
+        /*Xem số lượng bài viết đã đăng*/
+        public int NumberOfPublishedPosts()
+        {
+            return _uow.PostRepository.NumberOfPublishedPosts();
+        }
+
+        public IEnumerable<object> GetPublishedPostsByTitle(string keyword)
+        {
+            try
+            {
+                List<object> res = new List<object>();
+                res.Add(_baseDAL.ExecuteReader("Proc_GetPostsByTitle", new { keyword = $"%{keyword}%" }));
+                return res;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }            
+        }
+
+        public IEnumerable<object> GetPostsOfAuthor(string userId)
+        {
+            try
+            {
+                List<object> res = new List<object>();
+                res.Add(_baseDAL.ExecuteReader("Proc_GetPublishedPostsOfUser", new { UserId=userId}));
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

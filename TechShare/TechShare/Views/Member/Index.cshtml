@@ -1,6 +1,7 @@
 ﻿@model AppUser
 @{
     ViewData["Title"] = "Trang cá nhân";
+    ViewData["UserAuthenticated"] = "active";
 }
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -26,20 +27,20 @@
                     <div class="card card-border">
                         <div class="card-header p-2">
                             <ul class="nav nav-pills">
-                                <li class="nav-item"><a class="nav-link active" href="#member-posts" data-toggle="tab">Bài viết</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#member-notifi" data-toggle="tab">Thông báo</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#member-behavior" data-toggle="tab">Tương tác</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="#member-notifi" data-toggle="tab">Thông báo</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#member-posts" data-toggle="tab">Bài viết</a></li>
+                                @*<li class="nav-item"><a class="nav-link" href="#member-behavior" data-toggle="tab">Tương tác</a></li>*@
                                 <li class="nav-item"><a class="nav-link" href="#member-create-post" data-toggle="tab">Bài viết mới</a></li>
                             </ul>
                         </div><!-- /.card-header -->
                         <div class="card-body">
-                            <div class="tab-content">
+                            <div class="tab-content" id="tab-content-dialog">
                                 <div class="tab-pane active" id="member-posts">
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <button class="btn btn-primary-custom" id="btn-create-post"><i class="fa-plus mr-2"></i><span>Bài viết mới</span></button>
                                         </div>
-                                        <div id="list-posts"></div>                                                                                
+                                        <div id="list-posts" class="col-md-12"></div>
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="member-notifi">
@@ -64,7 +65,7 @@
                             <!--Dialog tác vụ thành công, thất bại-->
                             <div id="dialog-action-status" class="dialog">
                                 <div><i class="fa fa-info-circle"></i><span id="dia-content"></span></div>
-                            </div>                            
+                            </div>
                         </div><!-- /.card-body -->
                     </div>
                     <!-- /.nav-tabs-custom -->

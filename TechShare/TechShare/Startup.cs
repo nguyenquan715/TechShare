@@ -71,7 +71,7 @@ namespace TechShare
 
             app.UseAuthentication();
 
-            app.UseAuthorization();
+            app.UseAuthorization();           
 
             app.UseSession();
 

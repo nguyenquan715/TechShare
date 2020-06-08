@@ -1,0 +1,19 @@
+﻿@model IEnumerable<PostViewModel>
+@{
+    ViewData["Title"] = "Bài viết của " + Model.ElementAt(0).UserName;
+}
+<div class="row">
+    <!-- Latest Posts -->
+    <main class="posts-listing col-md-8">
+        <div class="container">
+            <partial name="/Views/Shared/_Posts.cshtml" />
+        </div>
+    </main>
+    <partial name="/Views/Shared/_Utility.cshtml" />
+</div>
+@section Styles{
+    <link href="~/css/Shared/utility.css" rel="stylesheet" />
+}
+@section Scripts{
+
+}

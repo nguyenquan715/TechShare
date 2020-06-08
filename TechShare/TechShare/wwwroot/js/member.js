@@ -13,7 +13,7 @@ $(document).ready(function () {
         console.log(err);
     });
     /*Danh sách bài viết của user*/
-    GetListOfPosts(1, 5);
+    GetListOfPosts(1, 10);
 
     /*Lưu bài viết*/
     $("#btn-save-post").on("click", () => {
@@ -26,7 +26,7 @@ $(document).ready(function () {
      */
     /*Xóa bài viết*/
     $(document).on("click", ".delete-post", function () {
-        let postId = $(this).parent().parent().parent().parent().data("post")["Id"];
+        let postId = $(this).parent().parent().parent().parent().data("post")["Id"];                
         $("#dialog-delete-post").dialog("open");
         $("#dialog-delete-post").data("postId", postId);
     });
@@ -58,7 +58,7 @@ var BindingListPosts = function (res) {
         switch (res[i]["Status"]) {
             case 0:
                 status = "Đã lưu";
-                action = `<a title="Gửi bài viết" class="btn-tool detail-post" href="#"><i class="fa fa-share-square"></i></a>
+                action = `<a title="Gửi bài viết" class="btn-tool submit-post" href="#"><i class="fa fa-share-square"></i></a>
                         <a title="Sửa bài viết" class="btn-tool edit-post" href="Member/EditPost?postId=${res[i].Id}"}><i class="fa fa-edit"></i></a>
                         <span title="Xóa bài viết" class="btn-tool delete-post"><i class="fa fa-trash"></i></span>`;
                 date = FormatDate(res[i]["UpdatedAt"]);
@@ -66,14 +66,14 @@ var BindingListPosts = function (res) {
             case 1:
                 status = "Đã gửi";
                 action = `<a title="Xem bài viết" class="btn-tool detail-post" href="#"><i class="fa fa-eye"></i></a>                        
-                        <a title="Gửi lại" class="btn-tool detail-post" href="#"><i class="fa fa-share-square"></i></a>`;
+                        <a title="Gửi lại" class="btn-tool submit-post" href="#"><i class="fa fa-share-square"></i></a>`;
                 date = FormatDate(res[i]["SubmitedAt"]);
                 break;
             case 2:
                 status = "Đã đăng";
-                action = `<a title="Xem bài viết" class="btn-tool detail-post" href="#"><i class="fa fa-eye"></i></a>
+                action = `<a title="Xem bài viết" class="btn-tool detail-post" href="Home/Post/${res[i].Id}"><i class="fa fa-eye"></i></a>
                         <a title="Sửa bài viết" class="btn-tool edit-post" href="#"><i class="fa fa-edit"></i></a>
-                        <a title="Thu hồi bài viết" class="btn-tool delete-post" href="#"><i class="fa fa-reply"></i></a>`;
+                        <a title="Thu hồi bài viết" class="btn-tool revoke-post" href="#"><i class="fa fa-reply"></i></a>`;
                 date = FormatDate(res[i]["PublishedAt"]);
                 break;
             default:                

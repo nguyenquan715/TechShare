@@ -1,0 +1,31 @@
+﻿<div class="row">
+    @if (Model.Count == 0)
+    {
+        <h2 class="text-danger">Không tìm thấy bài viết nào!</h2>
+    }
+    else
+    {
+        foreach (var post in Model)
+        {
+            <div class="post col-xl-6">
+                <div class="post-thumbnail"><a asp-controller="Home" asp-action="Post" asp-route-id=@post.Id><img src=@post.Avatar alt="..." class="img-fluid"></a></div>
+                <div class="post-details">
+                    <div class="post-meta d-flex justify-content-between">
+                        <div class="date meta-last">@post.PublishedAt.ToString()</div>
+                        <div class="category"><span>@post.DisplayCategories</span></div>
+                    </div><a asp-controller="Home" asp-action="Post" asp-route-id=@post.Id>
+                        <h3 class="h4">@post.Title</h3>
+                    </a>
+                    <footer class="post-footer d-flex align-items-center">
+                        <a asp-controller="Home" asp-action="PostsOfAuthor" asp-route-userId=@post.UserId class="author d-flex align-items-center flex-wrap">
+                            <div class="avatar"><img src="~/content/img/avatar.png" alt="..." class="img-fluid"></div>
+                            <div class="title"><span>@post.UserName</span></div>
+                        </a>
+                        <div class="views"><i class="icon-eye"></i> 500</div>
+                        <div class="comments meta-last"><i class="icon-comment"></i>12</div>
+                    </footer>
+                </div>
+            </div>
+        }
+    }
+</div>

@@ -8,6 +8,7 @@ namespace TechShare.Infra
 {
     sealed public class Utility
     {
+        /*Định dạng dữ liệu có dạng "<Id>1</Id><Id>2</Id>*/
         public string[] FormatDataRows(string data, string tagStart, string tagEnd)
         {
             string[] res = data.Split(tagStart);
@@ -16,14 +17,17 @@ namespace TechShare.Infra
             res = res.Take(res.Length - 1).ToArray();
             return res;
         }
+
+        /*Hiển thị dữ liệu dưới dạng 1 | 2 | 3*/
         public string DisplayCategories(string[] data)
         {
             return string.Join(" | ", data);
         }
 
+        /*Định dạng ngày tháng năm*/
         public DateTime ConvertStringToDatetime(string data)
         {
-            if (data.Length < 19) return new DateTime();
+            if (data.Length < 19||data==null) return new DateTime();
             int day = int.Parse(data.Substring(3, 2));
             int month = int.Parse(data.Substring(0, 2));
             int year = int.Parse(data.Substring(6, 4));
@@ -34,6 +38,7 @@ namespace TechShare.Infra
             return time;
         }
 
+        /*Binding dữ liệu vào đối tượng PostViewModel*/
         public PostViewModel BindingDataIntoPostModel(dynamic res)
         {
             string[] data = FormatDataRows((string)res.CategoriesName, "<Name>", "</Name>");

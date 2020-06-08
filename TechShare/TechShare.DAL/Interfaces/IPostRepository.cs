@@ -8,5 +8,6 @@ namespace TechShare.DAL
     public interface IPostRepository
     {
         int CheckPostOfUser(Guid postId, string userId);
+        int NumberOfPublishedPosts();
     }
 }

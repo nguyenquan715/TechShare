@@ -1,49 +1,30 @@
 ﻿@model IEnumerable<PostViewModel>
 @{
     ViewData["Title"] = "Home";
+    ViewData["Home"] = "active";    
 }
 <div class="row">
     <!-- Latest Posts -->
-    <main class="posts-listing col-lg-8">
+    <main class="posts-listing col-md-8">
         <div class="container">
-            <div class="row">
-                @foreach (var post in Model)
-                {
-                    <div class="post col-xl-6">
-                        <div class="post-thumbnail"><a asp-controller="Home" asp-action="Post" asp-route-id=@post.Id><img src=@post.Avatar alt="..." class="img-fluid"></a></div>
-                        <div class="post-details">
-                            <div class="post-meta d-flex justify-content-between">
-                                <div class="date meta-last">@post.PublishedAt.ToString()</div>
-                                <div class="category"><span>@post.DisplayCategories</span></div>
-                            </div><a  asp-controller="Home" asp-action="Post" asp-route-id=@post.Id>
-                                <h3 class="h4">@post.Title</h3>
-                            </a>                            
-                            <footer class="post-footer d-flex align-items-center">
-                                <a href="#" class="author d-flex align-items-center flex-wrap">
-                                    <div class="avatar"><img src="~/content/img/avatar.png" alt="..." class="img-fluid"></div>
-                                    <div class="title"><span>@post.UserName</span></div>
-                                </a>   
-                                <div class="views"><i class="icon-eye"></i> 500</div>
-                                <div class="comments meta-last"><i class="icon-comment"></i>12</div>
-                            </footer>
-                        </div>
-                    </div>
-                }                
-            </div>
+            <partial name="/Views/Shared/_Posts.cshtml" />
             <!-- Pagination -->
             <nav aria-label="Page navigation example">
-                <ul class="pagination pagination-template d-flex justify-content-center">
-                    <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
+                <ul class="pagination pagination-template d-flex justify-content-center" id="pagination-home">
+                    @*<li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
                     <li class="page-item"><a href="#" class="page-link active">1</a></li>
                     <li class="page-item"><a href="#" class="page-link">2</a></li>
                     <li class="page-item"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-right"></i></a></li>
+                    <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-right"></i></a></li>*@
                 </ul>
             </nav>
         </div>
     </main>
     <partial name="/Views/Shared/_Utility.cshtml" />
 </div>
-@section Styles{ 
+@section Styles{
     <link href="~/css/Shared/utility.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="~/js/home.js"></script>
 }

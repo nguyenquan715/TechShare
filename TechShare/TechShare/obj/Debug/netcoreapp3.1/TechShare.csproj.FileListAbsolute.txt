@@ -273,3 +273,6 @@ D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\TechSha
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\TechShare.csproj.CoreCompileInputs.cache
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\TechShare.genruntimeconfig.cache
 D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Member\EditPost.cshtml.g.cs
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Home\Search.cshtml.g.cs
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Home\PostsOfAuthor.cshtml.g.cs
+D:\NAQ\U3\HKII\Git\TechShare\TechShare\TechShare\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Posts.cshtml.g.cs

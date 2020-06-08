@@ -154,4 +154,22 @@ a:focus {
     border:1px solid var(--border-color);
     width:100%!important;      
 }
+/*Action với nhân viên và thành viên*/
+span.detail-user,span.delete-employee,span.block-member,span.member-to-employee,span.unblock-member{
+    color:var(--primary-color);
+    cursor:pointer;
+}
+    span.detail-user:hover, span.delete-employee:hover, span.block-member:hover, span.member-to-employee:hover, span.unblock-member:hover {
+        color: black;
+    }
+#userDropdown{
+    cursor:pointer;
+}
+.userDropdown-item:hover{
+    color:var(--primary-color);
+}
+.userDropdown-item:active{
+    background-color:white!important;
+}
+
 

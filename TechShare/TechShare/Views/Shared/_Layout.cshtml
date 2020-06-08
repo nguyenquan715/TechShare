@@ -34,29 +34,29 @@
             <div class="container-fluid">
                 <!-- Navbar Brand -->
                 <div class="navbar-header d-flex align-items-center justify-content-between">
-                    <a href="#" class="navbar-brand" id="logo-text">TechShare</a>
+                    <a asp-controller="Home" asp-action="Index" asp-route-page="1" class="navbar-brand" id="logo-text">TechShare</a>
                 </div>
                 <!-- Navbar Menu -->
                 <div id="navbarcollapse" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a asp-controller="Home" asp-action="Index" class="nav-link active">Home</a>
+                            <a asp-controller="Home" asp-action="Index" asp-route-page="1" class="nav-link @ViewData["Home"]">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a asp-controller="Home" asp-action="AboutUs" class="nav-link ">About Us</a>
+                            <a asp-controller="Home" asp-action="AboutUs" class="nav-link @ViewData["AboutUs"]">About Us</a>
                         </li>
                         @if (Context.User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <a class="nav-link dropdown-toggle @ViewData["UserAuthenticated"]" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     @Context.User.Identity.Name
                                 </a>
                                 <!-- Dropdown - User Information -->
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" asp-controller="Account" asp-action="RedirectByRole">
+                                    <a class="dropdown-item userDropdown-item" asp-controller="Account" asp-action="RedirectByRole">
                                         <i class="fas fa-user mr-2"></i>Trang cá nhân
                                     </a>
-                                    <a class="dropdown-item" asp-controller="Account" asp-action="Signout">
+                                    <a class="dropdown-item userDropdown-item" asp-controller="Account" asp-action="Signout">
                                         <i class="fas fa-sign-out mr-2"></i>Đăng xuất
                                     </a>
                                 </div>
@@ -65,10 +65,10 @@
                         else
                         {
                             <li class="nav-item">
-                                <a asp-controller="Account" asp-action="Signin" class="nav-link">Sign In</a>
+                                <a asp-controller="Account" asp-action="Signin" class="nav-link @ViewData["SignIn"]">Sign In</a>
                             </li>
                             <li class="nav-item">
-                                <a asp-controller="Account" asp-action="Signup" class="nav-link ">Sign Up</a>
+                                <a asp-controller="Account" asp-action="Signup" class="nav-link @ViewData["SignUp"]">Sign Up</a>
                             </li>
                         }
                     </ul>
